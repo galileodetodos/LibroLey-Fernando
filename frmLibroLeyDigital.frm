@@ -169,7 +169,7 @@ Begin VB.Form frmLibroLeyDigital
       _ExtentX        =   2355
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   21233665
+      Format          =   55508993
       CurrentDate     =   43803
    End
    Begin VB.TextBox txtNumero 
@@ -222,7 +222,7 @@ Begin VB.Form frmLibroLeyDigital
       _ExtentY        =   661
       _Version        =   393216
       CustomFormat    =   "MM/yyyy"
-      Format          =   21233667
+      Format          =   55508995
       CurrentDate     =   43802
    End
    Begin VB.Frame Frame1 
@@ -501,6 +501,7 @@ On Error GoTo Salir
                 sSQL = "SELECT PERSSUE.*, ISNULL(CBU,'') AS CBU, ISNULL(MAIL,'') AS MAIL FROM PERSSUE"
                 sSQL = sSQL & " LEFT JOIN PERSANEX ON PERSSUE.LEGAJO = PERSANEX.LEGAJO"
                 sSQL = sSQL & " WHERE PERSSUE.LEGAJO = " & sLegajo
+                sSQL = sSQL & " AND PERSSUE.SUCURSAL = " & sgEmpresas.Rows.At(i).Cells(3).value
                 
                 rs.Open sSQL, cn, adOpenDynamic, adLockBatchOptimistic, adCmdText
                 If rs.EOF Then
