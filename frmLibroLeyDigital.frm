@@ -16,7 +16,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Salir"
       Height          =   375
       Left            =   8160
-      TabIndex        =   20
+      TabIndex        =   12
       Top             =   4200
       Width           =   1095
    End
@@ -24,7 +24,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "    Eliminar liquidación      (no presentada en AFIP)"
       Height          =   615
       Left            =   4920
-      TabIndex        =   17
+      TabIndex        =   11
       Top             =   3960
       Width           =   1935
    End
@@ -32,14 +32,14 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Cerrar liquidación (Aceptada en AFIP)"
       Height          =   615
       Left            =   2640
-      TabIndex        =   16
+      TabIndex        =   10
       Top             =   3960
       Width           =   1935
    End
    Begin DDSharpGridOLEDB2.SGGrid sgEmpresas 
       Height          =   2175
       Left            =   120
-      TabIndex        =   14
+      TabIndex        =   8
       Top             =   1560
       Width           =   9135
       _cx             =   16113
@@ -163,20 +163,20 @@ Begin VB.Form frmLibroLeyDigital
    Begin MSComCtl2.DTPicker dtpFecPago 
       Height          =   375
       Left            =   7440
-      TabIndex        =   12
+      TabIndex        =   7
       Top             =   480
       Width           =   1335
       _ExtentX        =   2355
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   55508993
+      Format          =   21299201
       CurrentDate     =   43803
    End
    Begin VB.TextBox txtNumero 
       Height          =   405
       Left            =   5880
       MaxLength       =   5
-      TabIndex        =   10
+      TabIndex        =   6
       Top             =   480
       Width           =   1335
    End
@@ -184,14 +184,14 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Tipo de liquidación"
       Height          =   1335
       Left            =   2280
-      TabIndex        =   6
+      TabIndex        =   15
       Top             =   120
       Width           =   2055
       Begin VB.OptionButton optSemanal 
          Caption         =   "Semanal"
          Height          =   495
          Left            =   120
-         TabIndex        =   9
+         TabIndex        =   4
          Top             =   720
          Width           =   1215
       End
@@ -199,7 +199,7 @@ Begin VB.Form frmLibroLeyDigital
          Caption         =   "Quincenal"
          Height          =   375
          Left            =   120
-         TabIndex        =   8
+         TabIndex        =   3
          Top             =   480
          Width           =   1215
       End
@@ -207,7 +207,7 @@ Begin VB.Form frmLibroLeyDigital
          Caption         =   "Mensual"
          Height          =   255
          Left            =   120
-         TabIndex        =   7
+         TabIndex        =   2
          Top             =   240
          Width           =   975
       End
@@ -215,28 +215,28 @@ Begin VB.Form frmLibroLeyDigital
    Begin MSComCtl2.DTPicker dtpPeriodo 
       Height          =   375
       Left            =   4680
-      TabIndex        =   4
+      TabIndex        =   5
       Top             =   480
       Width           =   1095
       _ExtentX        =   1931
       _ExtentY        =   661
       _Version        =   393216
       CustomFormat    =   "MM/yyyy"
-      Format          =   55508995
+      Format          =   21299203
       CurrentDate     =   43802
    End
    Begin VB.Frame Frame1 
       Caption         =   "Tipo de envío"
       Height          =   1335
       Left            =   120
-      TabIndex        =   1
+      TabIndex        =   13
       Top             =   120
       Width           =   2055
       Begin VB.OptionButton optRE 
          Caption         =   "Rectificativa F931"
          Height          =   195
          Left            =   120
-         TabIndex        =   3
+         TabIndex        =   1
          Top             =   840
          Visible         =   0   'False
          Width           =   1815
@@ -245,7 +245,7 @@ Begin VB.Form frmLibroLeyDigital
          Caption         =   "Liquidación y F931"
          Height          =   315
          Left            =   120
-         TabIndex        =   2
+         TabIndex        =   0
          Top             =   360
          Width           =   1815
       End
@@ -254,7 +254,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Generar Archivo para AFIP"
       Height          =   615
       Left            =   360
-      TabIndex        =   0
+      TabIndex        =   9
       Top             =   3960
       Width           =   1935
    End
@@ -274,7 +274,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Label5"
       Height          =   255
       Left            =   8640
-      TabIndex        =   19
+      TabIndex        =   20
       Top             =   4440
       Visible         =   0   'False
       Width           =   615
@@ -285,7 +285,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "En proceso Sueldos"
       Height          =   375
       Left            =   5160
-      TabIndex        =   18
+      TabIndex        =   19
       Top             =   1080
       Width           =   3015
    End
@@ -293,7 +293,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Empresas"
       Height          =   255
       Left            =   2160
-      TabIndex        =   15
+      TabIndex        =   18
       Top             =   2520
       Width           =   1455
    End
@@ -301,7 +301,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Fecha de pago"
       Height          =   255
       Left            =   7440
-      TabIndex        =   13
+      TabIndex        =   17
       Top             =   240
       Width           =   1215
    End
@@ -309,7 +309,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Número Liq"
       Height          =   255
       Left            =   5880
-      TabIndex        =   11
+      TabIndex        =   16
       Top             =   240
       Width           =   1215
    End
@@ -317,7 +317,7 @@ Begin VB.Form frmLibroLeyDigital
       Caption         =   "Período"
       Height          =   255
       Left            =   4680
-      TabIndex        =   5
+      TabIndex        =   14
       Top             =   240
       Width           =   975
    End
@@ -327,6 +327,36 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public sRutaDestinoLibroLey As String
+
+Private Sub cargarParametros()
+
+    Dim cn As ADODB.Connection
+    Dim rs As ADODB.Recordset
+    Dim sSQL As String
+    
+    Set cn = New ADODB.Connection
+    Set rs = New ADODB.Recordset
+
+    cn.CursorLocation = adUseClient
+        
+    cn.Open SGEPOB
+    
+    sSQL = "select isnull(PRMT_DATO1,'') as PRMT_DATO1 from dbo.PARAMETROS where PRMT_CODIGO = 'RDLL'"
+    rs.Open sSQL, cn, adOpenDynamic, adLockReadOnly
+    
+    If Trim(rs!PRMT_DATO1) = "" Or (rs.BOF And rs.EOF) Then
+        sRutaDestinoLibroLey = App.Path
+    Else
+        sRutaDestinoLibroLey = Trim(rs!PRMT_DATO1)
+    End If
+    
+    cn.Close
+    
+    Set cn = Nothing
+    Set rs = Nothing
+
+End Sub
 
 Private Sub cmdCerrar_Click()
     
@@ -705,7 +735,9 @@ Avanzo:
         cn.Execute sSQL
     End If
     
-    MsgBox "Archivo generado con éxito"
+    FileCopy sCarpeta & "\" & sAuxNombreArchivo, sRutaDestinoLibroLey & "\" & sAuxNombreArchivo
+    
+    MsgBox "¡Archivo generado con éxito!", vbInformation, "Libro Ley Digital"
     
     rs.Close
     cn.Close
@@ -739,7 +771,10 @@ Private Sub Form_Load()
     sgEmpresas.Columns(1).Style.PictureAlignment = sgPicAlignCenterCenter
     
     LlenarEmpresas
+    cargarParametros
     
+    Me.dtpPeriodo.value = Date
+    Me.dtpFecPago.value = Date
 End Sub
 Private Sub LlenarEmpresas()
 

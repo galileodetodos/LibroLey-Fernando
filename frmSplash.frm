@@ -208,7 +208,7 @@ lblEstado = "Verificando la configuracion de los datos..."
 
 If Not fs.FileExists(App.Path & "\config.ini") Then
 
-    MsgBox "No existe el archivo de configuracion de datos." & vbCrLf, "Error en la configuracion de datos..."
+    MsgBox "No existe el archivo de configuracion de datos." & vbCrLf, "Error en la configuracion de datos...", vbInformation, "Libro Ley Digital"
     Set fs = Nothing
     End
 
